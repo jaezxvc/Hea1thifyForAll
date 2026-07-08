@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hea1thify | Mental Health Awareness</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+background:#eef7ff;
+color:#333;
+
+}
+
+/* NAVIGATION */
+
+nav{
+
+position:fixed;
+top:0;
+left:0;
+right:0;
+
+background:#0d6efd;
+padding:15px 8%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+z-index:999;
+
+box-shadow:0 4px 15px rgba(0,0,0,.15);
+
+}
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:15px;
+
+}
+
+.logo h1{
+
+font-family:'Allura',cursive;
+font-size:52px;
+color:white;
+
+}
+
+/* SVG LOGO */
+
+.logo svg{
+
+width:55px;
+height:55px;
+fill:white;
+
+}
+
+nav ul{
+
+display:flex;
+list-style:none;
+gap:30px;
+
+}
+
+nav ul li a{
+
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+color:#bde0ff;
+
+}
+
+/* SEARCH */
+
+.search-box{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+}
+
+.search-box input{
+
+padding:10px 18px;
+border:none;
+border-radius:30px;
+width:250px;
+outline:none;
+
+}
+
+.search-box button{
+
+padding:10px 18px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+
+background:white;
+color:#0d6efd;
+font-weight:bold;
+transition:.3s;
+
+}
+
+.search-box button:hover{
+
+background:#bde0ff;
+
+}
+
+/* HERO */
+
+.hero{
+
+height:100vh;
+
+background:
+
+linear-gradient(
+
+rgba(13,110,253,.82),
+rgba(13,110,253,.82)
+
+),
+
+url("https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1400&q=80");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+padding:30px;
+
+}
+
+.hero-content{
+
+max-width:850px;
+color:white;
+
+}
+
+.hero-content h2{
+
+font-size:62px;
+margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+font-size:20px;
+line-height:1.8;
+
+margin-bottom:35px;
+
+}
+
+.hero-content a{
+
+display:inline-block;
+
+padding:15px 35px;
+
+background:white;
+
+color:#0d6efd;
+
+border-radius:35px;
+
+font-weight:bold;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.hero-content a:hover{
+
+transform:translateY(-5px);
+
+}
+
+/* GENERAL */
+
+section{
+
+padding:100px 10%;
+
+}
+
+.section-title{
+
+text-align:center;
+
+font-size:40px;
+
+color:#0d6efd;
+
+margin-bottom:50px;
+
+}
+
+/* ===========================
+   ABOUT SECTION
+=========================== */
+
+.about-container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+
+}
+
+.about-card{
+
+background:white;
+padding:35px;
+border-radius:18px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+transition:.35s;
+
+border-top:6px solid #0d6efd;
+
+}
+
+.about-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 18px 40px rgba(13,110,253,.18);
+
+}
+
+.about-card h3{
+
+color:#0d6efd;
+
+margin-bottom:15px;
+
+font-size:24px;
+
+}
+
+.about-card p{
+
+line-height:1.8;
+
+font-size:16px;
+
+}
+
+/* ===========================
+   IMPORTANCE
+=========================== */
+
+.importance-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+
+}
+
+.importance-card{
+
+background:linear-gradient(135deg,#0d6efd,#49a5ff);
+
+color:white;
+
+padding:35px;
+
+border-radius:20px;
+
+transition:.4s;
+
+box-shadow:0 15px 30px rgba(0,0,0,.12);
+
+}
+
+.importance-card:hover{
+
+transform:scale(1.05);
+
+}
+
+.importance-card h3{
+
+margin-bottom:15px;
+
+font-size:22px;
+
+}
+
+.importance-card p{
+
+line-height:1.7;
+
+}
+
+/* ===========================
+   POSITIVE / NEGATIVE CARDS
+=========================== */
+
+.card-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+
+gap:30px;
+
+}
+
+.info-card{
+
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+transition:.35s;
+
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+border-bottom:6px solid #0d6efd;
+
+}
+
+.info-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 20px 35px rgba(13,110,253,.18);
+
+}
+
+.info-card h3{
+
+margin-bottom:18px;
+
+color:#0d6efd;
+
+font-size:24px;
+
+}
+
+.info-card p{
+
+line-height:1.8;
+
+}
+
+/* ===========================
+   QUOTE
+=========================== */
+
+.quote-box{
+
+max-width:900px;
+
+margin:auto;
+
+background:linear-gradient(135deg,#0d6efd,#4db8ff);
+
+padding:60px;
+
+border-radius:25px;
+
+color:white;
+
+text-align:center;
+
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.quote-box p{
+
+font-size:28px;
+
+font-style:italic;
+
+margin-bottom:25px;
+
+line-height:1.8;
+
+}
+
+.quote-box h3{
+
+font-weight:500;
+
+}
+
+/* ===========================
+   SECTION ANIMATION
+=========================== */
+
+section{
+
+animation:fadeUp .9s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.hero-content h2{
+
+font-size:45px;
+
+}
+
+.hero-content p{
+
+font-size:18px;
+
+}
+
+nav{
+
+flex-direction:column;
+
+gap:15px;
+
+padding:20px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.search-box input{
+
+width:180px;
+
+}
+
+.logo h1{
+
+font-size:42px;
+
+}
+/* ===========================
+STATISTICS
+=========================== */
+
+.stats-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+}
+
+.stat-card{
+
+background:linear-gradient(135deg,#0d6efd,#6ec1ff);
+
+color:white;
+
+padding:45px;
+
+border-radius:22px;
+
+text-align:center;
+
+transition:.4s;
+
+box-shadow:0 12px 30px rgba(0,0,0,.12);
+
+}
+
+.stat-card:hover{
+
+transform:translateY(-12px) scale(1.04);
+
+}
+
+.stat-card h1{
+
+font-size:52px;
+
+margin-bottom:15px;
+
+}
+
+.stat-card p{
+
+line-height:1.8;
+
+}
+
+/* ===========================
+FACTS
+=========================== */
+
+.facts-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+.fact-box{
+
+background:white;
+
+padding:35px;
+
+border-left:8px solid #0d6efd;
+
+border-radius:18px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.fact-box:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 18px 35px rgba(13,110,253,.15);
+
+}
+
+.fact-box h3{
+
+margin-bottom:18px;
+
+color:#0d6efd;
+
+}
+
+.fact-box p{
+
+line-height:1.8;
+
+}
+
+/* ===============================
+   FLOATING BUTTONS
+================================ */
+
+#topBtn{
+
+position:fixed;
+
+bottom:30px;
+
+right:30px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:#0d6efd;
+
+color:white;
+
+font-size:22px;
+
+cursor:pointer;
+
+display:none;
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+transition:.3s;
+
+z-index:999;
+
+}
+
+#topBtn:hover{
+
+transform:translateY(-5px);
+
+background:#0056d6;
+
+}
+
+/* DARK MODE BUTTON */
+
+#darkModeBtn{
+
+position:fixed;
+
+bottom:100px;
+
+right:30px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:white;
+
+color:#0d6efd;
+
+font-size:22px;
+
+cursor:pointer;
+
+box-shadow:0 10px 25px rgba(0,0,0,.20);
+
+transition:.3s;
+
+z-index:999;
+
+}
+
+#darkModeBtn:hover{
+
+transform:rotate(180deg);
+
+}
+
+/* ===============================
+   DARK MODE
+================================ */
+
+.dark{
+
+background:#111827;
+
+color:white;
+
+transition:.4s;
+
+}
+
+.dark nav{
+
+background:#031633;
+
+}
+
+.dark .about-card,
+.dark .info-card,
+.dark .fact-box{
+
+background:#1e293b;
+
+color:white;
+
+}
+
+.dark .quote-box{
+
+background:linear-gradient(135deg,#163f7a,#0d6efd);
+
+}
+
+.dark .importance-card{
+
+background:linear-gradient(135deg,#164ea6,#3182f6);
+
+}
+
+.dark .stat-card{
+
+background:linear-gradient(135deg,#164ea6,#4d9dff);
+
+}
+
+.dark .section-title{
+
+color:#73b4ff;
+
+}
+
+.dark input{
+
+background:#243447;
+
+color:white;
+
+}
+
+.dark footer{
+
+background:#031633;
+
+}
+
+
+</style>
+
+</head>
+
+
+<footer id="sources">
+
+<h2>Hea1tify</h2>
+
+<p>
+
+Promoting Mental Health Awareness for Every Filipino.
+
+</p>
+
+<br>
+
+<h3>Philippine References</h3>
+
+<ul>
+
+<li>Department of Health (DOH) – National Mental Health Program</li>
+
+<li>Republic Act No. 11036 – Mental Health Act</li>
+
+<li>National Center for Mental Health (NCMH)</li>
+
+<li>Philippine Health Insurance Corporation (PhilHealth) – Mental Health Benefits</li>
+
+</ul>
+
+<br>
+
+<h3>International References</h3>
+
+<ul>
+
+<li>World Health Organization (WHO) – Mental Health</li>
+
+<li>National Institute of Mental Health (NIMH)</li>
+
+<li>American Psychological Association (APA)</li>
+
+</ul>
+
+<br>
+
+<p>
+
+This website is created for educational purposes only. It does not replace professional medical advice, diagnosis, or treatment. If you or someone you know is experiencing mental health concerns, consult a licensed mental health professional or your nearest health facility.
+
+</p>
+
+<br>
+
+<p>
+
+© 2026 Hea1thify | Mental Health Awareness Website
+
+</p>
+
+</footer>
+
+</body>
+
+<nav>
+
+<a href="#" class="logo">
+
+    <svg viewBox="0 0 64 64">
+
+        <circle cx="32" cy="14" r="8"/>
+
+        <path d="M20 28
+        C20 20 44 20 44 28
+        L44 38
+        L52 56
+        L43 60
+        L36 45
+        L28 45
+        L21 60
+        L12 56
+        L20 38Z"/>
+
+        <rect x="27" y="31" width="10" height="10"/>
+
+        <rect x="30.5" y="27.5" width="3" height="17"/>
+
+    </svg>
+
+    <h1>Hea1tify</h1>
+
+</a>
+
+<ul>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#positive">Positive</a></li>
+
+<li><a href="#negative">Negative</a></li>
+
+<li><a href="#tips">Tips</a></li>
+
+<li><a href="#sources">Sources</a></li>
+
+</ul>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search...">
+
+<button onclick="searchContent()">
+
+Search
+
+</button>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h2>
+
+Mental Health Matters.
+
+</h2>
+
+<p>
+
+Mental health is just as important as physical health.
+Understanding our emotions, thoughts, and behaviors helps us
+live healthier, happier, and more meaningful lives.
+
+</p>
+
+<a href="#about">
+
+Learn More
+
+</a>
+
+</div>
+
+</section>
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">What is Mental Health?</h2>
+
+<div class="about-container">
+
+<div class="about-card searchable">
+
+<h3>Definition</h3>
+
+<p>
+
+According to the <strong>World Health Organization (WHO)</strong>, mental
+health is a state of mental well-being that enables people to cope with the
+stresses of life, realize their abilities, learn well, work well, and
+contribute to their community.
+
+</p>
+
+</div>
+
+<div class="about-card searchable">
+
+<h3>Why is Mental Health Important?</h3>
+
+<p>
+
+Good mental health influences how we think, feel, and act. It affects our
+relationships, school performance, decision-making, productivity, and overall
+quality of life.
+
+</p>
+
+</div>
+
+<div class="about-card searchable">
+
+<h3>Why Awareness Matters</h3>
+
+<p>
+
+Understanding mental health helps reduce stigma, encourages people to seek
+help early, and promotes kindness, empathy, and emotional resilience.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMPORTANCE -->
+
+<section id="importance">
+
+<h2 class="section-title">
+
+Importance of Mental Health
+
+</h2>
+
+<div class="importance-grid">
+
+<div class="importance-card searchable">
+
+<h3>🧠 Better Thinking</h3>
+
+<p>
+
+Healthy mental well-being improves concentration, memory,
+problem-solving, and decision-making.
+
+</p>
+
+</div>
+
+<div class="importance-card searchable">
+
+<h3>❤️ Healthy Relationships</h3>
+
+<p>
+
+People with good mental health communicate better,
+understand emotions, and build stronger relationships.
+
+</p>
+
+</div>
+
+<div class="importance-card searchable">
+
+<h3>🎯 Improved Performance</h3>
+
+<p>
+
+Positive mental health contributes to better academic,
+career, and personal success.
+
+</p>
+
+</div>
+
+<div class="importance-card searchable">
+
+<h3>🌱 Personal Growth</h3>
+
+<p>
+
+It builds resilience, confidence, optimism,
+and emotional maturity.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- POSITIVE -->
+
+<section id="positive">
+
+<h2 class="section-title">
+
+Positive Mental Health
+
+</h2>
+
+<div class="card-grid">
+
+<div class="info-card searchable">
+
+<h3>😊 Emotional Well-being</h3>
+
+<p>
+
+Recognizing emotions, expressing them appropriately,
+and managing stress effectively.
+
+</p>
+
+</div>
+
+<div class="info-card searchable">
+
+<h3>💪 Resilience</h3>
+
+<p>
+
+The ability to recover from setbacks,
+adapt to challenges,
+and keep moving forward.
+
+</p>
+
+</div>
+
+<div class="info-card searchable">
+
+<h3>🤝 Positive Relationships</h3>
+
+<p>
+
+Healthy communication,
+respect,
+trust,
+and empathy with others.
+
+</p>
+
+</div>
+
+<div class="info-card searchable">
+
+<h3>🎓 Growth Mindset</h3>
+
+<p>
+
+Viewing challenges as opportunities to learn
+instead of reasons to give up.
+
+</p>
+
+</div>
+
+<div class="info-card searchable">
+
+<h3>⚖️ Healthy Balance</h3>
+
+<p>
+
+Balancing school,
+family,
+friends,
+rest,
+exercise,
+and hobbies.
+
+</p>
+
+</div>
+
+<div class="info-card searchable">
+
+<h3>🌞 Optimism</h3>
+
+<p>
+
+Maintaining hope,
+gratitude,
+and confidence despite life's challenges.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- NEGATIVE -->
+
+<section id="negative">
+
+<h2 class="section-title">
+
+Negative Mental Health
+
+</h2>
+
+<div class="card-grid">
+
+<div class="info-card searchable">
+
+<h3>😞 Persistent Sadness</h3>
+
+<p>
+
+Feeling sad,
+hopeless,
+or empty for a prolonged period
+that interferes with daily life.
+
+</p>
+
+</div>
+
+<div class="info-card searchable">
+
+<h3>😰 Excessive Anxiety</h3>
+
+<p>
+
+Constant fear,
+worry,
+or nervousness that becomes difficult to control.
+
+</p>
+
+</div>
+
+<div class="info-card searchable">
+
+<h3>😴 Sleep Problems</h3>
+
+<p>
+
+Difficulty sleeping,
+sleeping too much,
+or poor sleep quality
+affecting daily activities.
+
+</p>
+
+</div>
+
+<div class="info-card searchable">
+
+<h3>😠 Emotional Instability</h3>
+
+<p>
+
+Frequent mood swings,
+anger,
+or irritability that affect relationships.
+
+</p>
+
+</div>
+
+<div class="info-card searchable">
+
+<h3>📉 Loss of Motivation</h3>
+
+<p>
+
+Difficulty finding enjoyment or motivation
+for school,
+work,
+or hobbies.
+
+</p>
+
+</div>
+
+<div class="info-card searchable">
+
+<h3>🚫 Social Withdrawal</h3>
+
+<p>
+
+Avoiding friends,
+family,
+or activities once enjoyed.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- QUOTE -->
+
+<section>
+<h2 class="section-title">
+
+A Message from a Mental Health Expert
+
+</h2>
+
+<div class="quote-box searchable">
+
+<p>
+
+<em>
+
+"There is no health without mental health."
+
+</em>
+
+</p>
+
+<h3>
+
+— Dr. Brock Chisholm,
+First Director-General of the World Health Organization
+
+</h3>
+
+</div>
+
+</section>
+
+
+...
+<!-- Last section -->
+
+<button id="topBtn" title="Go to top">↑</button>
+<button id="darkModeBtn" title="Toggle Dark Mode">🌙</button>
+
+<script>
+    // JavaScript goes here
+</script>
+<script>
+
+/* ==========================
+SEARCH
+========================== */
+
+function searchContent(){
+
+let input=document.getElementById("searchInput").value.toLowerCase();
+
+let cards=document.querySelectorAll(".searchable");
+
+cards.forEach(card=>{
+
+card.style.outline="none";
+
+if(card.innerText.toLowerCase().includes(input) && input!=""){
+
+card.scrollIntoView({
+
+behavior:"smooth",
+
+block:"center"
+
+});
+
+card.style.outline="4px solid #0d6efd";
+
+}
+
+});
+
+}
+
+/* ==========================
+TOP BUTTON
+========================== */
+
+let topBtn=document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+if(document.documentElement.scrollTop>300){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+}
+
+topBtn.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+}
+/* ==========================
+DARK MODE
+========================== */
+
+const darkBtn=document.getElementById("darkModeBtn");
+
+darkBtn.onclick=function(){
+
+document.body.classList.toggle("dark");
+
+if(document.body.classList.contains("dark")){
+
+darkBtn.innerHTML="☀️";
+
+}else{
+
+darkBtn.innerHTML="🌙";
+
+}
+
+}
+
+</script>
+
+<!-- SELF CARE -->
+
+<section id="tips">
+
+    <h2 class="section-title">
+        Tips for Better Mental Health
+    </h2>
+
+    <div class="card-grid">
+
+        <div class="info-card searchable reveal">
+            <h3>💙 Stay Connected</h3>
+            <p>
+                Talk with trusted friends, family members, teachers, or counselors.
+                Having a strong support system can improve emotional well-being and
+                help you cope with life's challenges.
+            </p>
+        </div>
+
+        <div class="info-card searchable reveal">
+            <h3>🏃 Stay Active</h3>
+            <p>
+                Exercise regularly by walking, jogging, dancing, or playing sports.
+                Physical activity releases endorphins that naturally improve your mood.
+            </p>
+        </div>
+
+        <div class="info-card searchable reveal">
+            <h3>😴 Get Enough Sleep</h3>
+            <p>
+                Aim for 8–10 hours of quality sleep each night. Good sleep helps
+                improve concentration, emotional regulation, and overall health.
+            </p>
+        </div>
+
+        <div class="info-card searchable reveal">
+            <h3>🥗 Eat Healthy</h3>
+            <p>
+                Eat nutritious foods such as fruits, vegetables, whole grains, and
+                lean proteins. A balanced diet supports both brain and body health.
+            </p>
+        </div>
+
+        <div class="info-card searchable reveal">
+            <h3>🧘 Manage Stress</h3>
+            <p>
+                Practice relaxation techniques such as deep breathing, meditation,
+                prayer, journaling, or spending time doing hobbies you enjoy.
+            </p>
+        </div>
+
+        <div class="info-card searchable reveal">
+            <h3>📞 Ask for Help</h3>
+            <p>
+                If you're feeling overwhelmed or struggling emotionally, don't be
+                afraid to seek help from a trusted adult, teacher, guidance counselor,
+                psychologist, or other qualified mental health professional.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
+
